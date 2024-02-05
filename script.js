@@ -80,7 +80,7 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
     console.log("displaying albums")
-    let a = await fetch(`http://127.0.0.1:5500/songs/`)
+    let a = await fetch(`https://github.com/PankajKumar17/spotify/tree/main/songs/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -116,7 +116,7 @@ async function displayAlbums() {
 
 async function main() {
     // Get the list of all the songs
-    await getSongs("songs/haryanvi")
+    await getSongs("https://github.com/PankajKumar17/spotify/tree/main/songs/haryanvi")
     playMusic(songs[0], true)
 
     // Display all the albums on the page
